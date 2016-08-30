@@ -1,0 +1,19 @@
+default: &default
+      adapter: postgresql
+      encoding: SQL_ASCII
+      pool: 5
+      username: ubuntu
+      password: srvt64x$
+      host:     <%= ENV['IP'] %>
+
+development:
+  <<: *default
+  database: sageOne_development
+
+test:
+  <<: *default
+  database: sageOne_test
+
+production:
+  <<: *default
+  database: sageOne_production
