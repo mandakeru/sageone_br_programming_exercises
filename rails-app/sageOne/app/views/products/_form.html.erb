@@ -1,0 +1,62 @@
+<%= simple_form_for @product, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :category1 %>
+  <%#= error_span(@product[:category1]) %>
+  <%= f.input :category2 %>
+  <%#= error_span(@product[:category2]) %>
+  <%= f.input :description %>
+  <%#= error_span(@product[:description]) %>
+  <%= f.input :indentification %>
+  <%#= error_span(@product[:indentification]) %>
+  <%= f.input :cost %>
+  <%#= error_span(@product[:cost]) %>
+  <%= f.input :sale_price1 %>
+  <%#= error_span(@product[:sale_price1]) %>
+  <%= f.input :observation %>
+  <%#= error_span(@product[:observation]) %>
+  <%= f.input :provider %>
+  <%#= error_span(@product[:provider]) %>
+  <%= f.input :stock %>
+  <%#= error_span(@product[:stock]) %>
+  <%= f.input :bar_code %>
+  <%#= error_span(@product[:bar_code]) %>
+  <%= f.input :sale_price2 %>
+  <%#= error_span(@product[:sale_price2]) %>
+  <%= f.input :sale_price3 %>
+  <%#= error_span(@product[:sale_price3]) %>
+  <%= f.input :minimum_stock %>
+  <%#= error_span(@product[:minimum_stock]) %>
+  <%= f.input :max_stock %>
+  <%#= error_span(@product[:max_stock]) %>
+  <%= f.input :stock_purchase %>
+  <%#= error_span(@product[:stock_purchase]) %>
+  <%= f.input :sale_unit %>
+  <%#= error_span(@product[:sale_unit]) %>
+  <%= f.input :ncm %>
+  <%#= error_span(@product[:ncm]) %>
+  <%= f.input :weight %>
+  <%#= error_span(@product[:weight]) %>
+  <%= f.input :size %>
+  <%#= error_span(@product[:size]) %>
+  <%= f.input :inactive %>
+  <%#= error_span(@product[:inactive]) %>
+  <%= f.input :product_type %>
+  <%#= error_span(@product[:product_type]) %>
+  <%= f.input :category3 %>
+  <%#= error_span(@product[:category3]) %>
+  <%= f.input :category4 %>
+  <%#= error_span(@product[:category4]) %>
+  <%= f.input :composition %>
+  <%#= error_span(@product[:composition]) %>
+  <%= f.input :feedstock %>
+  <%#= error_span(@product[:feedstock]) %>
+  <%= f.input :exp_material %>
+  <%#= error_span(@product[:exp_material]) %>
+  <%= f.input :to_sale %>
+  <%#= error_span(@product[:to_sale]) %>
+  <%= f.input :currency %>
+  <%#= error_span(@product[:currency]) %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                products_path, :class => 'btn btn-default' %>
+<% end %>

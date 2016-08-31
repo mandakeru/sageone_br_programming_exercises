@@ -1,0 +1,73 @@
+<%- model_class = Product -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:category1) %>:</strong></dt>
+  <dd><%= @product.category1 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:category2) %>:</strong></dt>
+  <dd><%= @product.category2 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
+  <dd><%= @product.description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:indentification) %>:</strong></dt>
+  <dd><%= @product.indentification %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:cost) %>:</strong></dt>
+  <dd><%= @product.cost %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:sale_price1) %>:</strong></dt>
+  <dd><%= @product.sale_price1 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:observation) %>:</strong></dt>
+  <dd><%= @product.observation %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:provider) %>:</strong></dt>
+  <dd><%= @product.provider %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:stock) %>:</strong></dt>
+  <dd><%= @product.stock %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:bar_code) %>:</strong></dt>
+  <dd><%= @product.bar_code %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:sale_price2) %>:</strong></dt>
+  <dd><%= @product.sale_price2 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:sale_price3) %>:</strong></dt>
+  <dd><%= @product.sale_price3 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:minimum_stock) %>:</strong></dt>
+  <dd><%= @product.minimum_stock %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:max_stock) %>:</strong></dt>
+  <dd><%= @product.max_stock %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:stock_purchase) %>:</strong></dt>
+  <dd><%= @product.stock_purchase %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:sale_unit) %>:</strong></dt>
+  <dd><%= @product.sale_unit %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:ncm) %>:</strong></dt>
+  <dd><%= @product.ncm %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:weight) %>:</strong></dt>
+  <dd><%= @product.weight %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:size) %>:</strong></dt>
+  <dd><%= @product.size %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:inactive) %>:</strong></dt>
+  <dd><%= @product.inactive %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:product_type) %>:</strong></dt>
+  <dd><%= @product.product_type %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:category3) %>:</strong></dt>
+  <dd><%= @product.category3 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:category4) %>:</strong></dt>
+  <dd><%= @product.category4 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:composition) %>:</strong></dt>
+  <dd><%= @product.composition %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:feedstock) %>:</strong></dt>
+  <dd><%= @product.feedstock %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:exp_material) %>:</strong></dt>
+  <dd><%= @product.exp_material %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:to_sale) %>:</strong></dt>
+  <dd><%= @product.to_sale %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:currency) %>:</strong></dt>
+  <dd><%= @product.currency %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              products_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_product_path(@product), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              product_path(@product),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
