@@ -33,6 +33,8 @@
 #  currency        :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  unity           :string
+#  brand           :string
 #
 # Indexes
 #
@@ -41,4 +43,11 @@
 #
 
 class Product < ActiveRecord::Base
+  
+      
+      def self.import(file)
+         CSV.foreach(file.path, :encoding => 'windows-1251:utf', :headers => :first_row,  :col_sep => ";" ) do |row|
+            Product.create! row.to_hash 
+         end
+      end
 end

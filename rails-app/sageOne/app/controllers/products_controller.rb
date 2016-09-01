@@ -6,6 +6,11 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all
   end
+  
+  def import
+    Product.import(params[:file])
+    redirect_to root_url, notice: "Produto importado com sucesso."
+  end
 
   # GET /products/1
   # GET /products/1.json
