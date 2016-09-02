@@ -3,8 +3,9 @@
 # Table name: products
 #
 #  id              :integer          not null, primary key
-#  category1       :string
+#  Categoria       :string
 #  category2       :string
+#  unity           :text
 #  description     :text
 #  indentification :integer
 #  cost            :decimal(, )
@@ -20,6 +21,7 @@
 #  stock_purchase  :integer
 #  sale_unit       :integer
 #  ncm             :integer
+#  brand           :string
 #  weight          :decimal(, )
 #  size            :decimal(, )
 #  inactive        :integer
@@ -33,8 +35,6 @@
 #  currency        :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
-#  unity           :string
-#  brand           :string
 #
 # Indexes
 #
@@ -43,11 +43,23 @@
 #
 
 class Product < ActiveRecord::Base
-  
-      
-      def self.import(file)
-         CSV.foreach(file.path, :encoding => 'windows-1251:utf', :headers => :first_row,  :col_sep => ";" ) do |row|
-            Product.create! row.to_hash 
-         end
+    
+    
+    def self.to_csv(options = {})
+        CSV.generate(options) do |csv|
+          csv << column_names
+          all.each do |product|
+              csv << product.attributes.values_at(*column_names)
+          end
       end
+        
+    end
+    
+    def self.import(file)
+        CSV.foreach(file.path, :encoding => "Windows-1251", :col_sep => ";") do |row|
+           
+            Product.create! row.to_hash
+        end
+    end
+    
 end

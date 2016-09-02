@@ -1,0 +1,54 @@
+class CreateProducts < ActiveRecord::Migration
+  def change
+    create_table :products do |t|
+      t.string  :Categoria
+      t.string  :category2
+      t.text    :unity
+      t.text    :description
+      t.integer :indentification
+      t.decimal :cost
+      t.decimal :sale_price1
+      t.text    :observation
+      t.integer :provider
+      t.integer :stock
+      t.integer :bar_code
+      t.decimal :sale_price2
+      t.decimal :sale_price3
+      t.integer :minimum_stock
+      t.integer :max_stock
+      t.integer :stock_purchase
+      t.integer :sale_unit
+      t.integer :ncm
+      t.string  :brand
+      t.decimal :weight
+      t.decimal :size
+      t.integer :inactive
+      t.integer :product_type
+      t.string  :category3
+      t.string  :category4
+      t.integer :composition
+      t.integer :feedstock
+      t.integer :exp_material
+      t.integer :to_sale
+      t.string  :currency
+      t.timestamps null: false
+    end
+    
+    add_index :products, :bar_code
+    add_index :products, :provider
+  end
+end
+
+
+ categoria,category2, unity, description, indentification, cost, sale_price1, observation, provider, 
+            stock, bar_code, sale_price2, sale_price3, minimum_stock, max_stock, stock_purchase, sale_unit,
+            ncm, brand, weight, size, inactive, product_type, category3, category4, composition, feedstock, 
+            exp_material, to_sale, currency = row
+            
+            Product.create(Categoria: categoria, category2: category2, unity: unity, description: description, 
+            indentification: integer, cost: cost, sale_price1: sale_price1, observation: observation, provider: provider, 
+            stock: stock, bar_code: bar_code, sale_price2: sale_price2, sale_price3: sale_price3, minimum_stock: minimum_stock,
+            max_stock: max_stock, stock_purchase: stock_purchase, sale_unit: sale_unit, ncm: ncm, brand: brand,
+            weight: weight, size: size, inactive: inactive, product_type: product_type, category3: category3, 
+            category4: category4, composition: composition, feedstock: feedstock, 
+            exp_material: exp_material, to_sale: to_sale, currency: currency)

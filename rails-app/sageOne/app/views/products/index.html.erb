@@ -12,7 +12,7 @@
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:category1) %></th>
+      <th><%= model_class.human_attribute_name(:Categoria) %></th>
       <th><%= model_class.human_attribute_name(:category2) %></th>
       <th><%= model_class.human_attribute_name(:description) %></th>
       <th><%= model_class.human_attribute_name(:indentification) %></th>
@@ -48,7 +48,7 @@
     <% @products.each do |product| %>
       <tr>
         <td><%= link_to product.id, product_path(product) %></td>
-        <td><%= product.category1 %></td>
+        <td><%= product.Categoria %></td>
         <td><%= product.category2 %></td>
         <td><%= product.description %></td>
         <td><%= product.indentification %></td>

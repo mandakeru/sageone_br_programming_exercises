@@ -11,14 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160831030310) do
+ActiveRecord::Schema.define(version: 20160901002627) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "products", force: :cascade do |t|
-    t.string   "category1"
+    t.string   "Categoria"
     t.string   "category2"
+    t.text     "unity"
     t.text     "description"
     t.integer  "indentification"
     t.decimal  "cost"
@@ -34,6 +35,7 @@ ActiveRecord::Schema.define(version: 20160831030310) do
     t.integer  "stock_purchase"
     t.integer  "sale_unit"
     t.integer  "ncm"
+    t.string   "brand"
     t.decimal  "weight"
     t.decimal  "size"
     t.integer  "inactive"
@@ -47,8 +49,6 @@ ActiveRecord::Schema.define(version: 20160831030310) do
     t.string   "currency"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.string   "unity"
-    t.string   "brand"
   end
 
   add_index "products", ["bar_code"], name: "index_products_on_bar_code", using: :btree
