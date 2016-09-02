@@ -1,82 +1,50 @@
 <%- model_class = Product -%>
-<div class="page-header">
+<div class="row col-md-12">
+  <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
-  <div style="float: right;">
-    <%= form_tag import_products_path, multipart: true do %>
-    <%= file_field_tag :file %>
-    <%= submit_tag "import" %>
-    <% end %>
-  </div>
 </div>
+<div style="float: right;">
+   <%= form_tag import_products_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Importar" %>
+  <% end %>
+</div>
+</div>
+
 <table class="table table-striped">
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:Categoria) %></th>
-      <th><%= model_class.human_attribute_name(:category2) %></th>
+      
       <th><%= model_class.human_attribute_name(:description) %></th>
-      <th><%= model_class.human_attribute_name(:indentification) %></th>
+    
       <th><%= model_class.human_attribute_name(:cost) %></th>
       <th><%= model_class.human_attribute_name(:sale_price1) %></th>
       <th><%= model_class.human_attribute_name(:observation) %></th>
       <th><%= model_class.human_attribute_name(:provider) %></th>
       <th><%= model_class.human_attribute_name(:stock) %></th>
       <th><%= model_class.human_attribute_name(:bar_code) %></th>
-      <th><%= model_class.human_attribute_name(:sale_price2) %></th>
-      <th><%= model_class.human_attribute_name(:sale_price3) %></th>
-      <th><%= model_class.human_attribute_name(:minimum_stock) %></th>
-      <th><%= model_class.human_attribute_name(:max_stock) %></th>
-      <th><%= model_class.human_attribute_name(:stock_purchase) %></th>
-      <th><%= model_class.human_attribute_name(:sale_unit) %></th>
-      <th><%= model_class.human_attribute_name(:ncm) %></th>
-      <th><%= model_class.human_attribute_name(:weight) %></th>
-      <th><%= model_class.human_attribute_name(:size) %></th>
-      <th><%= model_class.human_attribute_name(:inactive) %></th>
-      <th><%= model_class.human_attribute_name(:product_type) %></th>
-      <th><%= model_class.human_attribute_name(:category3) %></th>
-      <th><%= model_class.human_attribute_name(:category4) %></th>
-      <th><%= model_class.human_attribute_name(:composition) %></th>
-      <th><%= model_class.human_attribute_name(:feedstock) %></th>
-      <th><%= model_class.human_attribute_name(:exp_material) %></th>
-      <th><%= model_class.human_attribute_name(:to_sale) %></th>
-      <th><%= model_class.human_attribute_name(:currency) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
     <% @products.each do |product| %>
       <tr>
-        <td><%= link_to product.id, product_path(product) %></td>
+        <td><%= product.id %></td>
         <td><%= product.Categoria %></td>
-        <td><%= product.category2 %></td>
-        <td><%= product.description %></td>
-        <td><%= product.indentification %></td>
+      
+      
+        <td><%= link_to product.description, product_path(product) %></td>
+     
         <td><%= product.cost %></td>
         <td><%= product.sale_price1 %></td>
         <td><%= product.observation %></td>
         <td><%= product.provider %></td>
         <td><%= product.stock %></td>
         <td><%= product.bar_code %></td>
-        <td><%= product.sale_price2 %></td>
-        <td><%= product.sale_price3 %></td>
-        <td><%= product.minimum_stock %></td>
-        <td><%= product.max_stock %></td>
-        <td><%= product.stock_purchase %></td>
-        <td><%= product.sale_unit %></td>
-        <td><%= product.ncm %></td>
-        <td><%= product.weight %></td>
-        <td><%= product.size %></td>
-        <td><%= product.inactive %></td>
-        <td><%= product.product_type %></td>
-        <td><%= product.category3 %></td>
-        <td><%= product.category4 %></td>
-        <td><%= product.composition %></td>
-        <td><%= product.feedstock %></td>
-        <td><%= product.exp_material %></td>
-        <td><%= product.to_sale %></td>
-        <td><%= product.currency %></td>
-        <td><%=l product.created_at %></td>
+      
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_product_path(product), :class => 'btn btn-default btn-xs' %>

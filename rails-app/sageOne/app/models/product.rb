@@ -56,10 +56,17 @@ class Product < ActiveRecord::Base
     end
     
     def self.import(file)
-        CSV.foreach(file.path, :encoding => "Windows-1251", :col_sep => ";") do |row|
-           
-            Product.create! row.to_hash
+        
+        CSV.foreach(file.path, headers: true, :encoding => "Windows-1251", :col_sep => ";") do |row|
+          Product.create! row.to_hash
         end
+    end
+    
+    def self.open_spreeadsheet(file)
+      case File.extname(file.original_filename)
+        when ".csv" then CSV.new(file.path, headers: true, :encoding => "Windows-1251", :col_sep => ";")
+        else raise "Extenção desconhecida para: #{file.original_filename}"
+      end
     end
     
 end

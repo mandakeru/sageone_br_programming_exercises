@@ -1,60 +1,127 @@
 <%= simple_form_for @product, :html => { :class => 'form-horizontal' } do |f| %>
-  <%= f.input :category1 %>
-  <%#= error_span(@product[:category1]) %>
-  <%= f.input :category2 %>
-  <%#= error_span(@product[:category2]) %>
-  <%= f.input :description %>
-  <%#= error_span(@product[:description]) %>
-  <%= f.input :indentification %>
-  <%#= error_span(@product[:indentification]) %>
-  <%= f.input :cost %>
-  <%#= error_span(@product[:cost]) %>
-  <%= f.input :sale_price1 %>
-  <%#= error_span(@product[:sale_price1]) %>
-  <%= f.input :observation %>
-  <%#= error_span(@product[:observation]) %>
-  <%= f.input :provider %>
-  <%#= error_span(@product[:provider]) %>
-  <%= f.input :stock %>
-  <%#= error_span(@product[:stock]) %>
-  <%= f.input :bar_code %>
-  <%#= error_span(@product[:bar_code]) %>
-  <%= f.input :sale_price2 %>
-  <%#= error_span(@product[:sale_price2]) %>
-  <%= f.input :sale_price3 %>
-  <%#= error_span(@product[:sale_price3]) %>
-  <%= f.input :minimum_stock %>
-  <%#= error_span(@product[:minimum_stock]) %>
-  <%= f.input :max_stock %>
-  <%#= error_span(@product[:max_stock]) %>
-  <%= f.input :stock_purchase %>
-  <%#= error_span(@product[:stock_purchase]) %>
-  <%= f.input :sale_unit %>
-  <%#= error_span(@product[:sale_unit]) %>
-  <%= f.input :ncm %>
-  <%#= error_span(@product[:ncm]) %>
-  <%= f.input :weight %>
-  <%#= error_span(@product[:weight]) %>
-  <%= f.input :size %>
-  <%#= error_span(@product[:size]) %>
-  <%= f.input :inactive %>
-  <%#= error_span(@product[:inactive]) %>
-  <%= f.input :product_type %>
-  <%#= error_span(@product[:product_type]) %>
-  <%= f.input :category3 %>
-  <%#= error_span(@product[:category3]) %>
-  <%= f.input :category4 %>
-  <%#= error_span(@product[:category4]) %>
-  <%= f.input :composition %>
-  <%#= error_span(@product[:composition]) %>
-  <%= f.input :feedstock %>
-  <%#= error_span(@product[:feedstock]) %>
-  <%= f.input :exp_material %>
-  <%#= error_span(@product[:exp_material]) %>
-  <%= f.input :to_sale %>
-  <%#= error_span(@product[:to_sale]) %>
-  <%= f.input :currency %>
-  <%#= error_span(@product[:currency]) %>
+<div class="form-group col-md-6">
+  <label>Categoria</label>
+  <%= f.input :Categoria, label: false, input_html: { class: 'form-control' } %>
+</div>
+<div class="form-field col-md-6">
+  <label>Categoria 2</label>
+   <%= f.input :category2, label: false, input_html: { class: 'form-control' } %>
+</div>
+<div class="form-field col-md-6">
+  <label>Unidade</label>
+  <%= f.input :unity, label: false, input_html: { class: 'form-control' } %>
+</div>
+<div class="form-field col-md-6">
+  <label>Descrição</label>
+  <%= f.input :description, label: false, input_html: { class: 'form-control' } %>
+</div>
+<div class="form-field col-md-6">
+  <label>Indentificação</label>
+  <%= f.input :indentification, label: false, input_html: { class: 'form-control' } %>
+</div>
+<div class="form-field col-md-6">
+  <label>Custo</label>
+  <%= f.input :cost, label: false, input_html: { class: 'form-control' } %>
+</div>
+<div class="form-field col-md-6">
+  <label>Preço venda</label>
+   <%= f.input :sale_price1, label: false, input_html: { class: 'form-control' } %>
+</div>
+<div class="form-field col-md-6">
+  <label>Observação</label>
+  <%= f.input :observation, label: false, input_html: { class: 'form-control' } %>
+</div>
+<div class="form-field col-md-6">
+  <label>Fornecedor</label>
+   <%= f.input :provider, label: false, input_html: { class: 'form-control' } %>
+</div>
+<div class="form-field col-md-6">
+  <label>Estoque</label>
+    <%= f.input :stock, label: false, input_html: { class: 'form-control' } %>
+</div>
+<div class="form-field col-md-6">
+  <label>Código de barras</label>
+   <%= f.input :bar_code, label: false, input_html: { class: 'form-control' } %>
+</div>
+<div class="form-field col-md-6">
+  <label>Preço venda 2</label>
+  <%= f.input :sale_price2, label: false, input_html: { class: 'form-control' } %>
+</div>
+<div class="form-field col-md-6">
+  <label>Preço venda 3</label>
+  <%= f.input :sale_price3, label: false, input_html: { class: 'form-control' } %>
+</div>
+<div class="form-field col-md-6">
+  <label>Estoque mínimo</label>
+  <%= f.input :minimum_stock, label: false, input_html: { class: 'form-control' } %>
+</div>
+<div class="form-field col-md-6">
+  <label>Estoque máximo</label>
+  <%= f.input :max_stock, label: false, input_html: { class: 'form-control' } %>
+</div>
+<div class="form-field col-md-6">
+  <label>Venda estoque</label>
+  <%= f.input :stock_purchase, label: false, input_html: { class: 'form-control' } %>
+</div>
+<div class="form-field col-md-6">
+  <label>Venda Unitario</label>
+  <%= f.input :sale_unit, label: false, input_html: { class: 'form-control' } %>
+</div>
+<div class="form-field col-md-6">
+  <label>NCM</label>
+  <%= f.input :ncm, label: false, input_html: { class: 'form-control' } %>
+</div>
+<div class="form-field col-md-6">
+  <label>Marca</label>
+  <%= f.input :brand, label: false, input_html: { class: 'form-control' } %>
+</div>
+<div class="form-field col-md-6">
+  <label>Peso</label>
+  <%= f.input :weight, label: false, input_html: { class: 'form-control' } %>
+</div>
+<div class="form-field col-md-6">
+  <label>Tamanho</label>
+  <%= f.input :size, label: false, input_html: { class: 'form-control' } %>
+</div>
+<div class="form-field col-md-6">
+  <label>Inativo</label>
+    <%= f.input :inactive, label: false, input_html: { class: 'form-control' } %>
+</div>
+<div class="form-field col-md-6">
+  <label>Tipo</label>
+  <%= f.input :product_type, label: false, input_html: { class: 'form-control' } %>
+</div>
+<div class="form-field col-md-6">
+  <label>Categoria3</label>
+  <%= f.input :category3, label: false, input_html: { class: 'form-control' } %>
+</div>
+<div class="form-field col-md-6">
+  <label>Categoria4</label>
+    <%= f.input :category4, label: false, input_html: { class: 'form-control' } %>
+</div>
+<div class="form-field col-md-6">
+  <label>Composição</label>
+  <%= f.input :composition, label: false, input_html: { class: 'form-control' } %>
+</div>
+<div class="form-field col-md-6">
+  <label>Materia prima</label>
+  <%= f.input :feedstock, label: false, input_html: { class: 'form-control' } %>
+</div>
+<div class="form-field col-md-6">
+  <label>Exp Material</label>
+  <%= f.input :exp_material, label: false, input_html: { class: 'form-control' } %>
+</div>
+<div class="form-field col-md-6">
+  <label>Para venda</label>
+  <%= f.input :to_sale, label: false, input_html: { class: 'form-control' } %>
+</div>
+<div class="form-field col-md-6">
+  <label>Moeda</label>
+  <%= f.input :currency, label: false, input_html: { class: 'form-control' } %>
+</div>
+ 
+ <hr>
+ <br>
 
   <%= f.button :submit, :class => 'btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),

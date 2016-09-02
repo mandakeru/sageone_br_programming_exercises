@@ -10,8 +10,7 @@ class ProductsController < ApplicationController
   def import
     
     Product.import(params[:file])
-    
-    redirect_to root_url, notice: "Produto importado com sucesso."
+    redirect_to products_path, notice: "Produto importado com sucesso."
     
     
   
