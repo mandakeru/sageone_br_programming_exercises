@@ -45,7 +45,7 @@
 class Product < ActiveRecord::Base
     
     validates :bar_code, presence: true
-    validates :ncm, :currency, :cost, presence: true
+    validates :currency, :cost, presence: true
    
     
     

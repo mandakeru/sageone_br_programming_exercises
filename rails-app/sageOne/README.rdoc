@@ -1,28 +1,12 @@
-== README
+## SageOne
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Aplicação feita por jean-felipeds@hotmail.com
 
-Things you may want to cover:
+-> A importação dos arquivos é feita a partir de um arquivo com os headers em inglês
+Não foi possível importar arquivo txt
+-> Banco de dados Postgres.
+-> BDD com rspec
 
-* Ruby version
+Link para o csv ja com os headers em inglês:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+https://www.dropbox.com/s/241r05zdrbt37z6/prod_2.csv?dl=0
